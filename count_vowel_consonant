@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class VowelConsonantCounter {
+    public static void countVowelsAndConsonants(String str) {
+        str = str.toLowerCase().replaceAll("[^a-z]", ""); 
+        int vowels = 0, consonants = 0;
+        String vowelsList = "aeiou";
+
+        for (char ch : str.toCharArray()) {
+            if (vowelsList.indexOf(ch) != -1) {
+                vowels++;
+            } else {
+                consonants++;
+            }
+        }
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        countVowelsAndConsonants(input);
+        scanner.close();
+    }
+}
+-----------------------------------------------------
+
+OUTPUT:
+
+Enter a string: Puvitha
+Vowels: 3
+Consonants: 4
+
+-------------------------------------------------------
+
