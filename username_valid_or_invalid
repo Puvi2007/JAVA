@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class ValidatorChecker{
+public static Boolean isValidUsername(String username){
+return username.matches("[a-zA-Z0-9]{6,}");
+}
+public static void main(String[]args){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a username:");
+String inputname=sc.nextLine();
+if(isValidUsername(inputname)){
+System.out.println("Valid Username")
+}else{
+System.out.println("Invalid Username");
+}
+sc.close();
+}
+}
+---------------------------------------------------------------
+OUTPUT:
+Enter a username:
+puvitha
+Valid Username
+----------------------------------------------------------------
